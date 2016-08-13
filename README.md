@@ -1,23 +1,29 @@
-### mobile_robotics
+### Learning ROS setup scripts
+The scripts here assume that you have an account on github (which is free at github.com).  
 
-Refer to [cwru_wiki/Mobile-Robotics:-Workstation-Setup-Scripts](https://github.com/cwru-robotics/cwru_wiki/wiki/Mobile-Robotics:-Workstation-Setup-Scripts) for detailed information
+You will need "git" installed on your machine to use these scripts.  If "git" is not already
+installed on your machine, it can be installed with:
+`sudo apt-get --yes --force-yes install git`
 
 ---
 
 ### Getting the scripts and making them executable
-To run these scripts, clone cwru_scripts anywhere on your computer by typing the following in any directory:
-`git clone https://github.com/cwru-robotics/cwru_scripts.git`
+To run these scripts, clone learning_ros_setup_scripts anywhere on your computer by typing the following in any directory:
+`git clone https://github.com/wsnewman/learning_ros_setup_scripts.git`
 
-Once you have the files, change the directory to `mobile_robotics` by typing:
-`cd cwru_scripts/mobile_robotics`
+Once you have the files, change the directory to `learning_ros_setup_scripts` by typing:
+`cd learning_ros_setup_scripts`
 
 After this, make the scripts executable by typing:
 `chmod +x *.sh`
 
 ### ROS Setup
-If you would like to set up a ROS installation on your own computer or Ubuntu install with all of the dependencies and programs we'll be using in the class, you can run the script `install_ros_w_dep_397.sh` by typing:
-`./install_ros_w_dep_397.sh`
+To set up a ROS installation with all of the dependencies and programs with "learning ROS", run the script `install_ros_and_tools.sh` by typing:
+`./install_ros_and_tools.sh`
 
 ### Workstation Setup
-To setup your ROS workspace (which you will have to do every time you log in to a new Jennings computer) use the `setup_workspace_376.sh` script.  You will need to pass your github username and email as arguments to the script:
-`./setup_workspace_376.sh github_username github@email.com`
+To setup your ROS workspace, use the `setup_workspace_learning_ros.sh` script.  You will need to pass your 
+github username and email as arguments to the script:
+`./setup_workspace_learning_ros.sh github_username github@email.com`
+where github_username is your username on github, and github@email.com is your e-mail address associated with your
+github account.
