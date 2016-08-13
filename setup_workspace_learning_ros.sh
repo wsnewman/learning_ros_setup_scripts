@@ -30,8 +30,8 @@ then
   echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc
   echo "alias cs_create_pkg='~/ros_ws/src/learning_ros_external_packages/cs_create_pkg.py'" >> ~/.bashrc
   echo "export ROS_WORKSPACE=$HOME'/ros_ws'" >> ~/.bashrc
-  #echo "ROS_IP=`hostname -I | grep 172.[0-9]*.[0-9]*.[0-9]*`" >> ~/.bashrc
-  #echo "export ROS_IP=$ROS_IP" >> ~/.bashrc
+  echo "ROS_IP=127.0.0.1" >> ~/.bashrc
+  echo "export ROS_IP=$ROS_IP" >> ~/.bashrc
   
   source ~/.bashrc
   
