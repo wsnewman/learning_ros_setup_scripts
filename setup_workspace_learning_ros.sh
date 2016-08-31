@@ -1,7 +1,7 @@
 #!/bin/bash
-# Learning ROS
-# Workspace setup
-# v 0.25
+# Learning ROS - Workspace setup script
+# v 0.26
+# Wyatt Newman and Luc Bettaieb
 
 echo "Setting up workspace."
 
@@ -12,7 +12,8 @@ if [ "$USERNAME" != "" ] || [ "$EMAIL" != "" ];
 then
   source /opt/ros/indigo/setup.bash
   echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
-	
+  rosdep update
+
   mkdir -p ~/ros_ws/src
 	
   cd ~/ros_ws/src  && catkin_init_workspace
@@ -26,18 +27,15 @@ then
 
   cd ~/ros_ws && catkin_make
   cd ~/ros_ws && catkin_make install
-  
+
   echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc
   echo "alias cs_create_pkg='~/ros_ws/src/learning_ros_external_packages/cs_create_pkg.py'" >> ~/.bashrc
   echo "export ROS_WORKSPACE=$HOME'/ros_ws'" >> ~/.bashrc
-  echo "ROS_IP=127.0.0.1" >> ~/.bashrc
-  echo "export ROS_IP=$ROS_IP" >> ~/.bashrc
-  
+  echo "export ROS_IP=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`" >> ~/.bashrc
+
   source ~/.bashrc
-  
-  rosdep update
-  
+
 else
-	echo "USAGE: ./setup_workspace_learning_ros your_github_username your_email@email.com"
+  echo "USAGE: ./setup_workspace_learning_ros your_github_username your_email@email.com"
 
 fi
