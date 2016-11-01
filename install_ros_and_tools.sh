@@ -37,6 +37,7 @@ echo -e "\e[1m \e[34m >>> Installing dependencies for mobile robotics code \e[21
 
   sudo apt-get --yes --force-yes install ros-indigo-joy ros-indigo-costmap-2d ros-indigo-nav-core ros-indigo-sound-play ros-indigo-amcl ros-indigo-slam-gmapping ros-indigo-move-base ros-indigo-controller-interface ros-indigo-gazebo-ros-control ros-indigo-joint-state-controller ros-indigo-effort-controllers ros-indigo-moveit-msgs ros-indigo-stdr-simulator ros-indigo-teleop-twist-keyboard ros-indigo-slam-gmapping ros-indigo-map-server
   sudo apt-get --yes --force-yes install ros-indigo-baxter-core-msgs ros-indigo-baxter-examples ros-indigo-baxter-sim-controllers ros-indigo-baxter-sim-examples ros-indigo-baxter-tools ros-indigo-baxter-description ros-indigo-baxter-sim-hardware ros-indigo-baxter-interface ros-indigo-baxter-simulator ros-indigo-baxter-common ros-indigo-baxter-sdk ros-indigo-baxter-sim-io ros-indigo-baxter-gazebo ros-indigo-baxter-moveit-config
+sudo apt-get --yes --force-yes install ros-indigo-ur-description ros-indigo-ur-gazebo
   
 echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
 
