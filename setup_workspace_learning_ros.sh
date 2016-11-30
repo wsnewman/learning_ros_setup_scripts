@@ -40,3 +40,5 @@ else
   echo "USAGE: ./setup_workspace_learning_ros your_github_username your_email@email.com"
 
 fi
+
+echo "[!!!] NB: You must still manually add your ROS_IP to your ~/.bashrc.  Do this by checking your IP with hostname -I or ifconfig and then adding export ROS_IP='x.x.x.x` to your ~/.bashrc."
