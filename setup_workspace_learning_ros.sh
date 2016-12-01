@@ -31,6 +31,7 @@ then
   echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc
   echo "alias cs_create_pkg='~/ros_ws/src/learning_ros_external_packages/cs_create_pkg.py'" >> ~/.bashrc
   echo "export ROS_WORKSPACE=$HOME'/ros_ws'" >> ~/.bashrc
+  echo "alias baxter_master='export ROS_MASTER_URI='http://129.22.149.130:11311'" >> ~/.bashrc
   # echo "export ROS_IP=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`" >> ~/.bashrc
 
   source ~/.bashrc
@@ -39,3 +40,5 @@ else
   echo "USAGE: ./setup_workspace_learning_ros your_github_username your_email@email.com"
 
 fi
+
+echo "[!!!] NB: You must still manually add your ROS_IP to your ~/.bashrc.  Do this by checking your IP with hostname -I or ifconfig and then adding export ROS_IP='x.x.x.x` to your ~/.bashrc."
