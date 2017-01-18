@@ -24,6 +24,12 @@ then
 
   cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_external_packages.git
   cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros.git
+  
+  # Cloning STDR is only necessary because of a bug in the current ROS binary release
+  # This prevents spawning a new robot on the screen. See this bug report for more information:
+  # https://github.com/stdr-simulator-ros-pkg/stdr_simulator/issues/195
+
+  cd ~/ros_ws/src && git clone https://github.com/stdr-simulator-ros-pkg/stdr_simulator.git
 
   cd ~/ros_ws && catkin_make
   cd ~/ros_ws && catkin_make install
