@@ -23,7 +23,7 @@ then
   git config --global user.email "$EMAIL"
 #https://github.com/wsnewman/learning_ros_kinetic.git
 #https://github.com/wsnewman/learning_ros_external_packages_kinetic.git
-  cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_external_packages.git
+  cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_kinetic.git
   cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_external_packages_kinetic.git
   
   # Cloning STDR is only necessary because of a bug in the current ROS binary release
