@@ -40,9 +40,9 @@ then
 
 
   echo "alias cs_create_pkg='~/ros_ws/src/learning_ros_external_packages/cs_create_pkg.py'" >> ~/.bashrc
-  echo "export ROS_WORKSPACE=$HOME'/ros_ws'" >> ~/.bashrc
-  echo "export ROS_MASTER_URI=http://localhost:11311" >> ~/.bashrc
-  echo "alias baxter_master='export ROS_MASTER_URI='http://129.22.149.130:11311''" >> ~/.bashrc
+  echo "export ROS_WORKSPACE='$HOME/ros_ws'" >> ~/.bashrc
+  echo "export ROS_MASTER_URI='http://localhost:11311'" >> ~/.bashrc
+  echo "alias baxter_master='export ROS_MASTER_URI=http://129.22.149.130:11311'" >> ~/.bashrc
   # echo "export ROS_IP=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`" >> ~/.bashrc
 
 
