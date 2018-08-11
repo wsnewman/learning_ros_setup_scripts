@@ -36,6 +36,7 @@ echo -e "\e[34m >>> Setting up rosinstall \e[39m"
 echo -e "\e[1m \e[34m >>> Installing dependencies for mobile robotics code \e[21m \e[39m"
 
 sudo apt-get --yes --force-yes install ros-kinetic-joy ros-kinetic-costmap-2d ros-kinetic-nav-core ros-kinetic-sound-play ros-kinetic-amcl ros-kinetic-slam-gmapping ros-kinetic-move-base ros-kinetic-controller-interface ros-kinetic-gazebo-ros-control ros-kinetic-joint-state-controller ros-kinetic-effort-controllers ros-kinetic-moveit-msgs ros-kinetic-stdr-simulator ros-kinetic-teleop-twist-keyboard ros-kinetic-slam-gmapping ros-kinetic-map-server ros-kinetic-qt-build ros-kinetic-kdl-parser ros-kinetic-combined-robot-hw ros-kinetic-combined-robot-hw-tests ros-kinetic-controller-manager-tests ros-kinetic-diff-drive-controller ros-kinetic-force-torque-sensor-controller ros-kinetic-gripper-action-controller ros-kinetic-imu-sensor-controller ros-kinetic-position-controllers ros-kinetic-ros-control ros-kinetic-ros-controllers ros-kinetic-rqt-joint-trajectory-controller ros-kinetic-velocity-controllers
+sudo apt-get --yes --force-yes install ros-kinetic-cv-bridge ros-kinetic-polled-camera ros-kinetic-camera-info-manager ros-kinetic-tf-conversions
 
 sudo apt-get --yes --force-yes install ros-kinetic-ur-description ros-kinetic-ur-gazebo
   
