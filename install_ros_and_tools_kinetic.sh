@@ -52,6 +52,11 @@ echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
   sudo apt-get --yes --force-yes install gitk git-gui
   sudo apt-get --yes --force-yes install kazam vlc
   
+  
+echo -e "\e[1m \e[34m >>> Installing rqt \e[21m \e[39m"
+  sudo apt-get --yes install ros-kinetic-rqt
+  sudo apt-get --yes install ros-kinetic-rqt-common-plugins
+
   source ~/.bashrc
 
 source ~/ros_ws/devel/setup.bash
