@@ -21,6 +21,7 @@ After this, make the scripts executable by typing:
 To set up a ROS installation of Indigo with all of the dependencies and programs with "learning ROS", run the script `install_ros_and_tools.sh` by typing:
 `./install_ros_and_tools.sh`
 (or `bash install_ros_and_tools.sh`)
+
 For ROS Kinetic use this line:  (use with Ubuntu 16.04)
 `./install_ros_and_tools_kinetic.sh`
 
