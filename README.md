@@ -3,7 +3,7 @@ The scripts here assume that you have an account on github (which is free at git
 
 You will need "git" installed on your machine to use these scripts.  If "git" is not already
 installed on your machine, it can be installed with:
-`sudo apt-get --yes --force-yes install git`
+`sudo apt-get --yes --allow install git`
 
 ---
 
