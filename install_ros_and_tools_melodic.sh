@@ -15,7 +15,7 @@ echo -e "\e[34m >>> Setting up sources.list and keys... \e[39m"
 
 echo -e "\e[34m >>> ...done\e[39m"
 
-  sudo apt-get update && sudo apt-get upgrade
+  sudo apt-get update && sudo apt-get --yes --allow upgrade
 
 echo -e "\e[34m >>> Beginning ros-kinetic-desktop-full installation...\e[39m"
 
