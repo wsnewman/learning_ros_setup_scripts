@@ -60,8 +60,8 @@ echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
   sudo apt update
   sudo apt install --yes --force-yes code
 
-  sudo add-apt-repository ppa:obsproject/obs-studio
-  sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+  sudo add-apt-repository -y ppa:obsproject/obs-studio
+  sudo add-apt-repository -y ppa:kirillshkrogalev/ffmpeg-next
   sudo apt-get update
   sudo apt-get install --yes --force-yes obs-studio
 
