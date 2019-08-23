@@ -56,7 +56,7 @@ echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
   ## Addition for 2019: Added VS code, OBS capture software
   sudo apt install --yes --allow software-properties-common apt-transport-https wget
   wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+  sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
   sudo apt update
   sudo apt install --yes --allow code
 
