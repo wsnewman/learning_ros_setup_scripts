@@ -40,7 +40,9 @@ echo -e "\e[1m \e[34m >>> Installing dependencies for mobile robotics code \e[21
   sudo apt-get --yes --force-yes install ros-melodic-joy ros-melodic-costmap-2d ros-melodic-nav-core ros-melodic-sound-play ros-melodic-amcl ros-melodic-slam-gmapping ros-melodic-move-base ros-melodic-controller-interface ros-melodic-gazebo-ros-control ros-melodic-joint-state-controller ros-melodic-effort-controllers ros-melodic-moveit-msgs ros-melodic-teleop-twist-keyboard ros-melodic-slam-gmapping ros-melodic-map-server ros-melodic-qt-gui ros-melodic-kdl-parser ros-melodic-combined-robot-hw ros-melodic-combined-robot-hw-tests ros-melodic-controller-manager-tests ros-melodic-diff-drive-controller ros-melodic-force-torque-sensor-controller ros-melodic-gripper-action-controller ros-melodic-imu-sensor-controller ros-melodic-position-controllers ros-melodic-ros-control ros-melodic-ros-controllers ros-melodic-rqt-joint-trajectory-controller ros-melodic-velocity-controllers
   sudo apt-get --yes --force-yes install ros-melodic-cv-bridge ros-melodic-polled-camera ros-melodic-camera-info-manager ros-melodic-tf-conversions
   sudo apt-get --yes --force-yes install ros-melodic-opencv-apps libopencv-dev
-
+  sudo apt-get --yes install ros-melodic-rqt
+  sudo apt-get --yes install ros-melodic-rqt-common-plugins
+  
 ## Obsolete Packages:
 ## ros-kinetic-ur-description ros-kinetic-ur-gazebo ros-kinetic-stdr-simulator
 
@@ -56,12 +58,12 @@ echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
   wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
   sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
   sudo apt update
-  sudo apt install code
+  sudo apt install --yes --force-yes code
 
   sudo add-apt-repository ppa:obsproject/obs-studio
   sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
   sudo apt-get update
-  sudo apt-get install obs-studio
+  sudo apt-get install --yes --force-yes obs-studio
 
 
   sudo apt-get --yes --echo -e "\e[34m >>> Setting up rosinstall \e[39m"
@@ -70,11 +72,6 @@ echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
   sudo apt-get --yes --force-yes install gitk git-gui
   sudo apt-get --yes --force-yes install kazam vlc
   
-  
-echo -e "\e[1m \e[34m >>> Installing rqt \e[21m \e[39m"
-  sudo apt-get --yes install ros-kinetic-rqt
-  sudo apt-get --yes install ros-kinetic-rqt-common-plugins
-
   source ~/.bashrc
 
 source ~/ros_ws/devel/setup.bash
