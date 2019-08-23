@@ -18,21 +18,16 @@ After this, make the scripts executable by typing:
 `chmod +x *.sh`
 
 ### ROS Setup
-To set up a ROS installation of Indigo with all of the dependencies and programs with "learning ROS", run the script `install_ros_and_tools.sh` by typing:
-`./install_ros_and_tools.sh`
-(or `bash install_ros_and_tools.sh`)
+For ROS Melodic use this line: (System needs to be 18.04)
+`./install_ros_and_tools_melodic.sh`
+(or `bash install_ros_and_tools_melodic.sh`)
 
-For ROS Kinetic use this line:  (use with Ubuntu 16.04)
-`./install_ros_and_tools_kinetic.sh`
+For other versions of install script, please refer to the respective folders for the install scripts.
 
 ### Workstation Setup
-To setup your ROS workspace for ROS Indigo, use the `setup_workspace_learning_ros.sh` script.  You will need to pass your 
+To setup your ROS workspace for ROS Melodic, use the `setup_workspace_learning_ros_melodic.sh` script.  You will need to pass your 
 github username and email as arguments to the script:
-`./setup_workspace_learning_ros.sh github_username github@email.com`
-(or `bash setup_workspace_learning_ros.sh github_username github@email.com`)
+`./setup_workspace_learning_ros_melodic.sh github_username github@email.com`
+(or `bash setup_workspace_learning_ros_melodic.sh github_username github@email.com`)
 where github_username is your username on github, and github@email.com is your e-mail address associated with your
 github account.
-
-For ROS Kinetic use the following line:
-`./setup_workspace_learning_ros_kinetic.sh github_username github@email.com`
-
