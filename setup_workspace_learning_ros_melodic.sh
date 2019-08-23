@@ -25,8 +25,8 @@ then
 
   #https://github.com/wsnewman/learning_ros_kinetic.git
   #https://github.com/wsnewman/learning_ros_external_packages_kinetic.git
-  cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_kinetic.git
-  cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_external_pkgs_kinetic.git
+  #cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_kinetic.git
+  #cd ~/ros_ws/src && git clone https://github.com/wsnewman/learning_ros_external_pkgs_kinetic.git
   
   # Cloning STDR is only necessary because of a bug in the current ROS binary release
   # This prevents spawning a new robot on the screen. See this bug report for more information:
