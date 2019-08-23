@@ -54,7 +54,7 @@ echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
   sudo apt-get --yes --force-yes install sublime-text-installer 
   
   ## Addition for 2019: Added VS code, OBS capture software
-  sudo apt install software-properties-common apt-transport-https wget
+  sudo apt install --yes --force-yes software-properties-common apt-transport-https wget
   wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
   sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
   sudo apt update
