@@ -71,6 +71,7 @@ echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
   sudo apt-get --yes --allow install python-rosinstall install netbeans
   sudo apt-get --yes --allow install gitk git-gui
   sudo apt-get --yes --allow install kazam vlc
+  sudo apt-get --yes --allow install vim
   
   source ~/.bashrc
 
