@@ -1,13 +1,13 @@
 #!/bin/bash
 # Learning ROS
 # ROS + Dependencies Installation
-# v 0.40
+# v 0.50
 # Wyatt Newman and Luc Bettaieb
 # Updated by Frank (Chude Qian)
 
 echo "Beginning ROS Installation"
 
-echo -e "\e[1m \e[34m >>> Beginning ROS Melodic Installation \e[21m \e[39m"
+echo -e "\e[1m \e[34m >>> Beginning ROS noetic Installation \e[21m \e[39m"
 echo -e "\e[34m >>> Setting up sources.list and keys... \e[39m"
 
   sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -15,68 +15,47 @@ echo -e "\e[34m >>> Setting up sources.list and keys... \e[39m"
 
 echo -e "\e[34m >>> ...done\e[39m"
 
-  sudo apt-get update && sudo apt-get --yes --force-yes upgrade
+  sudo apt-get update && sudo apt-get upgrade -y
 
 echo -e "\e[34m >>> Beginning ros-kinetic-desktop-full installation...\e[39m"
 
-  sudo apt-get --yes --force-yes install ros-melodic-desktop-full
+  sudo apt-get install -y ros-noetic-desktop-full
+
+echo -e "\e[34m >>> Setting up environment \e[39m"
+
+  echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+  source ~/.bashrc
+
+echo -e "\e[34m >>> Setting up rosinstall \e[39m"
+
+  sudo apt install -y \
+    python3-rosdep \
+    python3-rosinstall \
+    python3-rosinstall-generator \
+    python3-wstool \
+    build-essential
 
 echo -e "\e[34m >>> Setting up rosdep\e[39m"
 
   sudo rosdep init
   rosdep update
 
-echo -e "\e[34m >>> Setting up environment \e[39m"
-
-  echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-  source ~/.bashrc
-
-echo -e "\e[34m >>> Setting up rosinstall \e[39m"
-
-  sudo apt-get --yes --force-yes install python-rosinstall
-
 echo -e "\e[1m \e[34m >>> Installing dependencies for mobile robotics code \e[21m \e[39m"
 
-  sudo apt-get --yes --force-yes install ros-melodic-joy ros-melodic-costmap-2d ros-melodic-nav-core ros-melodic-sound-play ros-melodic-amcl ros-melodic-slam-gmapping ros-melodic-move-base ros-melodic-controller-interface ros-melodic-gazebo-ros-control ros-melodic-joint-state-controller ros-melodic-effort-controllers ros-melodic-moveit-msgs ros-melodic-teleop-twist-keyboard ros-melodic-slam-gmapping ros-melodic-map-server ros-melodic-qt-gui ros-melodic-kdl-parser ros-melodic-combined-robot-hw ros-melodic-combined-robot-hw-tests ros-melodic-controller-manager-tests ros-melodic-diff-drive-controller ros-melodic-force-torque-sensor-controller ros-melodic-gripper-action-controller ros-melodic-imu-sensor-controller ros-melodic-position-controllers ros-melodic-ros-control ros-melodic-ros-controllers ros-melodic-rqt-joint-trajectory-controller ros-melodic-velocity-controllers
-  sudo apt-get --yes --force-yes install ros-melodic-cv-bridge ros-melodic-polled-camera ros-melodic-camera-info-manager ros-melodic-tf-conversions
-  sudo apt-get --yes --force-yes install ros-melodic-opencv-apps libopencv-dev
-  sudo apt-get --yes install ros-melodic-rqt
-  sudo apt-get --yes install ros-melodic-rqt-common-plugins
+sudo apt-get update && apt-get install -y ros-noetic-joy ros-noetic-costmap-2d ros-noetic-nav-core ros-noetic-sound-play ros-noetic-amcl \
+  ros-noetic-slam-gmapping ros-noetic-move-base ros-noetic-controller-interface ros-noetic-gazebo-ros-control ros-noetic-joint-state-controller \
+  ros-noetic-effort-controllers ros-noetic-moveit-msgs ros-noetic-teleop-twist-keyboard ros-noetic-slam-gmapping ros-noetic-map-server ros-noetic-qt-gui \
+  ros-noetic-kdl-parser ros-noetic-combined-robot-hw ros-noetic-combined-robot-hw-tests ros-noetic-controller-manager ros-noetic-diff-drive-controller \
+  ros-noetic-force-torque-sensor-controller ros-noetic-gripper-action-controller ros-noetic-imu-sensor-controller ros-noetic-position-controllers \
+  ros-noetic-ros-control ros-noetic-ros-controllers ros-noetic-rqt-joint-trajectory-controller ros-noetic-velocity-controllers ros-noetic-cv-bridge \
+  ros-noetic-polled-camera ros-noetic-camera-info-manager ros-noetic-tf-conversions ros-noetic-opencv-apps libopencv-dev ros-noetic-rqt \
+  ros-noetic-rqt-common-plugins ros-noetic-ur-client-library
   
 ## Obsolete Packages:
-## ros-kinetic-ur-description ros-kinetic-ur-gazebo ros-kinetic-stdr-simulator
+##  ros-melodic-controller-manager-tests ros-kinetic-ur-description ros-kinetic-ur-gazebo ros-kinetic-stdr-simulator
 
 echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
 
-  sudo apt-get --yes --force-yes install git
-  sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
-  sudo apt-get update
-  sudo apt-get --yes --force-yes install sublime-text-installer 
-  
-  ## Addition for 2019: Added VS code, OBS capture software
-  sudo apt install --yes --force-yes software-properties-common apt-transport-https wget
-  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-  sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-  sudo apt update
-  sudo apt install --yes --force-yes code
+  sudo apt-get install -y git vlc obs-studio vim code gitk git-gui
 
-  sudo add-apt-repository -y ppa:obsproject/obs-studio
-  sudo add-apt-repository -y ppa:kirillshkrogalev/ffmpeg-next
-  sudo apt-get update
-  sudo apt-get install --yes --force-yes obs-studio
-
-
-  sudo apt-get --yes --echo -e "\e[34m >>> Setting up rosinstall \e[39m"
-
-  sudo apt-get --yes --force-yes install python-rosinstall install netbeans
-  sudo apt-get --yes --force-yes install gitk git-gui
-  sudo apt-get --yes --force-yes install kazam vlc
-  sudo apt-get --yes --force-yes install vim
-  
-  source ~/.bashrc
-
-source ~/ros_ws/devel/setup.bash
-
-
-
-
+source ~/.bashrc
