@@ -17,7 +17,7 @@ echo -e "\e[34m >>> ...done\e[39m"
 
 echo -e "\e[34m >>> Beginning ros-kinetic-desktop-full installation...\e[39m"
 
-  sudo apt-get --yes --allow install ros-kinetic-desktop-full 
+  sudo apt-get --yes --force-yes install ros-kinetic-desktop-full 
 
 echo -e "\e[34m >>> Setting up rosdep\e[39m"
 
