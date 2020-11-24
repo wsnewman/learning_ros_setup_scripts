@@ -17,7 +17,7 @@ echo -e "\e[34m >>> ...done\e[39m"
 
   sudo apt-get update && sudo apt-get upgrade -y
 
-echo -e "\e[34m >>> Beginning ros-kinetic-desktop-full installation...\e[39m"
+echo -e "\e[34m >>> Beginning ros-noetic-desktop-full installation...\e[39m"
 
   sudo apt-get install -y ros-noetic-desktop-full
 
