@@ -17,7 +17,7 @@ echo -e "\e[34m >>> ...done\e[39m"
 
   sudo apt-get update && sudo apt-get upgrade -y
 
-echo -e "\e[34m >>> Beginning ros-kinetic-desktop-full installation...\e[39m"
+echo -e "\e[34m >>> Beginning ros-noetic-desktop-full installation...\e[39m"
 
   sudo apt-get install -y ros-noetic-desktop-full
 
@@ -57,5 +57,5 @@ sudo apt-get update && apt-get install -y ros-noetic-joy ros-noetic-costmap-2d r
 echo -e "\e[1m \e[34m >>> Installing support software \e[21m \e[39m"
 
   sudo apt-get install -y git vlc obs-studio vim gitk git-gui
-  sudo snap install code
+  sudo snap install code --classic
 source ~/.bashrc
