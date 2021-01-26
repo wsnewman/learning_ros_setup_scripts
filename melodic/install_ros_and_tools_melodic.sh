@@ -17,7 +17,7 @@ echo -e "\e[34m >>> ...done\e[39m"
 
   sudo apt-get update && sudo apt-get --yes --force-yes upgrade
 
-echo -e "\e[34m >>> Beginning ros-kinetic-desktop-full installation...\e[39m"
+echo -e "\e[34m >>> Beginning ros-melodic-desktop-full installation...\e[39m"
 
   sudo apt-get --yes --force-yes install ros-melodic-desktop-full
 
