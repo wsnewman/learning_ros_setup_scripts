@@ -31,3 +31,25 @@ github username and email as arguments to the script:
 (or `bash setup_workspace_learning_ros_melodic.sh github_username github@email.com`)
 where github_username is your username on github, and github@email.com is your e-mail address associated with your
 github account.
+
+### Setting up STDR simulation for ROS Noetic
+
+First install qt4 and make it default
+```
+sudo add-apt-repository ppa:rock-core/qt4
+sudo apt-get update
+sudo apt-get install libqtcore4 qt4-qmake libqt4-dev
+export QT_SELECT=4
+```
+make sure it is the active environment by running
+```qtchooser -print-env```
+then install the map_server
+```sudo apt install ros-noetic-map-server```
+Then clone and compile the stdr_simulator package
+```
+cd ~/ros_ws/src
+git clone https://github.com/stdr-simulator-ros-pkg/stdr_simulator.git
+cd ..
+rosdep install --from-paths src --ignore-src --rosdistro noetic
+catkin_make -DQT_QMAKE_EXECUTABLE=/usr/bin/qmake-qt4
+```
